@@ -49,16 +49,16 @@ export default function GenXCodeCertificate({
             style={{ 
               width: "72px", 
               height: "72px", 
-              background: "linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.02) 100%)",
+              backgroundColor: "rgba(255, 255, 255, 0.1)",
+              border: "1px solid rgba(255, 255, 255, 0.2)",
               borderRadius: "20px",
-              border: "1px solid rgba(255,255,255,0.15)",
-              boxShadow: "0 8px 32px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.2)",
-              backdropFilter: "blur(12px)"
+              boxShadow: "0 8px 32px rgba(0,0,0,0.2)"
             }}
           >
             <img 
-              src="/genxcode.svg" 
+              src="https://arcade.cosmolix.co.in/icon.svg" 
               alt="GenXCode" 
+              crossOrigin="anonymous"
               style={{ width: "44px", height: "44px", objectFit: "contain" }} 
             />
           </div>
@@ -207,10 +207,10 @@ export default function GenXCodeCertificate({
                 color: "#160431",
                 borderBottom: "3px solid #160431",
                 display: "inline-block",
-                paddingBottom: "8px",
+                paddingBottom: "16px",
                 paddingRight: "32px",
                 minWidth: "350px",
-                lineHeight: 1
+                lineHeight: 1.2
               }}
             >
               {studentName}

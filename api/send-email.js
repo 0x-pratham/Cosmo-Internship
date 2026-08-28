@@ -293,7 +293,7 @@ export default async function handler(req, res) {
                     <tr>
                       <td style="background-color: #1b053e; padding: 40px 30px; text-align: center;">
                         <!-- Using main logo as fallback, update to full URL of genxcode.svg if hosted -->
-                        <img src="https://cosmolix.co.in/genxcode.svg" alt="GenXCode" width="70" style="display: block; margin: 0 auto 16px auto; border: 0; background-color: rgba(255,255,255,0.1); padding: 12px; border-radius: 12px;" />
+                        <img src="https://arcade.cosmolix.co.in/icon.svg" alt="GenXCode" width="70" style="display: block; margin: 0 auto 16px auto; border: 0; background-color: rgba(255,255,255,0.1); padding: 12px; border-radius: 12px;" />
                         <h1 style="color: #FFFFFF; font-size: 26px; font-weight: 700; margin: 0 0 8px 0; letter-spacing: -0.5px;">Certificate of Participation</h1>
                         <p style="color: #c7a6f3; font-size: 13px; font-weight: 600; margin: 0; text-transform: uppercase; letter-spacing: 2px;">GenXCode by Cosmolix</p>
                       </td>
