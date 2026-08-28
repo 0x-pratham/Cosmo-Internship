@@ -55,8 +55,9 @@ export default function GenXCodeCertificate({
               boxShadow: "0 8px 32px rgba(0,0,0,0.2)"
             }}
           >
+            {/* LOGO UPDATED TO LOCAL PUBLIC PATH */}
             <img 
-              src="https://arcade.cosmolix.co.in/icon.svg" 
+              src="/genxcode.svg" 
               alt="GenXCode" 
               crossOrigin="anonymous"
               style={{ width: "44px", height: "44px", objectFit: "contain" }} 
