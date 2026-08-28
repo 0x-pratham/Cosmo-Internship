@@ -44,7 +44,6 @@ export default function GenXCodeCertificate({
       >
         {/* Top: Logo & Brand Name */}
         <div style={{ padding: "72px 48px 0" }}>
-          {/* Logo updated to public/icon.png and box removed */}
           <img 
             src="/icon.png" 
             alt="GenXCode" 
@@ -224,18 +223,14 @@ export default function GenXCodeCertificate({
             </strong>{" "}
             organized by{" "}
             <strong style={{ color: "#160431", fontWeight: 700 }}>
-              GenXCode by Cosmolix
-            </strong>
-            , from{" "}
-            <strong style={{ color: "#160431", fontWeight: 700 }}>
-              {startDate || "[Start Date]"}
+              GenXCode
             </strong>{" "}
-            to{" "}
+            on{" "}
             <strong style={{ color: "#160431", fontWeight: 700 }}>
-              {endDate || "[End Date]"}
+              {endDate || "[Date]"}
             </strong>
             . The participant demonstrated genuine enthusiasm, a collaborative
-            approach, and a strong commitment to active learning and
+            approach and a strong commitment to active learning and
             interactive problem-solving throughout the event.
           </p>
         </div>
