@@ -44,25 +44,13 @@ export default function GenXCodeCertificate({
       >
         {/* Top: Logo & Brand Name */}
         <div style={{ padding: "72px 48px 0" }}>
-          <div 
-            className="flex items-center justify-center mb-8" 
-            style={{ 
-              width: "72px", 
-              height: "72px", 
-              backgroundColor: "rgba(255, 255, 255, 0.1)",
-              border: "1px solid rgba(255, 255, 255, 0.2)",
-              borderRadius: "20px",
-              boxShadow: "0 8px 32px rgba(0,0,0,0.2)"
-            }}
-          >
-            {/* LOGO UPDATED TO LOCAL PUBLIC PATH */}
-            <img 
-              src="/genxcode.svg" 
-              alt="GenXCode" 
-              crossOrigin="anonymous"
-              style={{ width: "44px", height: "44px", objectFit: "contain" }} 
-            />
-          </div>
+          {/* Logo updated to public/icon.png and box removed */}
+          <img 
+            src="/icon.png" 
+            alt="GenXCode" 
+            crossOrigin="anonymous"
+            style={{ width: "64px", height: "64px", objectFit: "contain", marginBottom: "24px" }} 
+          />
 
           <h2
             style={{
