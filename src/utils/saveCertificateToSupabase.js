@@ -10,7 +10,6 @@ export async function saveCertificateToSupabase({
   startDate,
   endDate,
   pdfUrl,
-  certificateType = 'COSMOLIX', // Default to COSMOLIX backward compatibility ke liye
 }) {
   const { error } = await supabase.from("certificates").insert({
     certificate_id: certificateId,
@@ -22,7 +21,6 @@ export async function saveCertificateToSupabase({
     start_date: startDate,
     end_date: endDate,
     pdf_url: pdfUrl,
-    certificate_type: certificateType, // Supabase ke naye column se mapped
     issued_at: new Date().toISOString(),
   })
 

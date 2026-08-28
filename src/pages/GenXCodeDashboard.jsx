@@ -129,7 +129,6 @@ export default function GenXCodeDashboard() {
         startDate: formattedStartDate,
         endDate: formattedEndDate,
         pdfUrl,
-        certificateType: "GENXCODE",
       })
 
       const emailResponse = await fetch("/api/send-email", {
@@ -393,7 +392,7 @@ export default function GenXCodeDashboard() {
 
           {/* -------------------------------------------------------
               2. Hidden Render Target
-              
+
               IMPORTANT:
               exportCertificatePdf looks for:
               #certificate-render-target
