@@ -2,13 +2,16 @@ import { Routes, Route } from "react-router-dom"
 
 import ProtectedRoute from "@/components/auth/ProtectedRoute"
 import { AuthProvider } from "@/context/AuthContext"
-import AdminHub from "@/pages/AdminHub" // Naya Central Hub Import kiya
-import Dashboard from "@/pages/Dashboard" // Ye aapka Offer Letter Dashboard hai
+import AdminHub from "@/pages/AdminHub" 
+import Dashboard from "@/pages/Dashboard" 
 import Login from "@/pages/Login"
 import VerifyDocument from "@/pages/VerifyDocument"
 import CertificateDashboard from "@/pages/CertificateDashboard"
 import OnboardingDashboard from "@/pages/OnboardingDashboard"
 import Welcome from "@/pages/Welcome" 
+
+// 1. Yaha naya GenXCode Dashboard import karo
+import GenXCodeDashboard from "@/pages/GenXCodeDashboard" 
 
 export default function App() {
   return (
@@ -19,7 +22,6 @@ export default function App() {
           element={<Login />}
         />
 
-        {/* 1. Naya Central Hub Route */}
         <Route
           path="/"
           element={
@@ -29,7 +31,6 @@ export default function App() {
           }
         />
 
-        {/* 2. Offer Letter Dashboard Route */}
         <Route
           path="/offer-letters"
           element={
@@ -39,7 +40,6 @@ export default function App() {
           }
         />
 
-        {/* 3. Onboarding Pass Route */}
         <Route
           path="/onboarding-pass"
           element={
@@ -49,12 +49,21 @@ export default function App() {
           }
         />
 
-        {/* 4. Certificates Route */}
         <Route 
           path="/certificates" 
           element={
             <ProtectedRoute>
               <CertificateDashboard />
+            </ProtectedRoute>
+          } 
+        />
+
+        {/* 2. Yaha naya GenXCode Route add kiya hai */}
+        <Route 
+          path="/genxcode-certificates" 
+          element={
+            <ProtectedRoute>
+              <GenXCodeDashboard />
             </ProtectedRoute>
           } 
         />

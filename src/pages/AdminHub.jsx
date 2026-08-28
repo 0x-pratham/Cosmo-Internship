@@ -1,7 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@/context/AuthContext';
-import { FiFileText, FiAward, FiUserCheck, FiLogOut } from 'react-icons/fi';
+// FiStar add kiya GenXCode ke liye
+import { FiFileText, FiAward, FiUserCheck, FiLogOut, FiStar } from 'react-icons/fi';
 import cosmolixLogo from "@/logo/cosmolix-logo.png";
 
 export default function AdminHub() {
@@ -40,6 +41,16 @@ export default function AdminHub() {
       color: '#059669',
       bg: '#F0FDF4',
       route: '/certificates'
+    },
+    // Naya GenXCode Module
+    {
+      id: 'genxcode',
+      title: 'GenXCode Certs',
+      description: 'Issue specialized GenXCode program completion certificates.',
+      icon: <FiStar size={32} />,
+      color: '#6828a2',
+      bg: '#F3E8FF',
+      route: '/genxcode-certificates'
     }
   ];
 
@@ -86,13 +97,13 @@ export default function AdminHub() {
           </p>
         </div>
 
-        {/* Module Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Module Cards Grid - Adjusted to lg:grid-cols-4 so 4 items fit nicely */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {modules.map((mod) => (
             <div 
               key={mod.id}
               onClick={() => navigate(mod.route)}
-              className="group cursor-pointer bg-white rounded-3xl p-8 border border-gray-100 transition-all duration-300"
+              className="group cursor-pointer bg-white rounded-3xl p-6 border border-gray-100 transition-all duration-300 flex flex-col"
               style={{ boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)' }}
               onMouseOver={(e) => {
                 e.currentTarget.style.transform = 'translateY(-5px)';
@@ -111,13 +122,13 @@ export default function AdminHub() {
               >
                 {mod.icon}
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Times New Roman, serif' }}>
+              <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Times New Roman, serif' }}>
                 {mod.title}
               </h3>
-              <p className="text-gray-500 leading-relaxed font-medium">
+              <p className="text-gray-500 leading-relaxed font-medium flex-grow text-sm">
                 {mod.description}
               </p>
-              <div className="mt-8 flex items-center font-bold text-sm transition-colors" style={{ color: mod.color }}>
+              <div className="mt-6 flex items-center font-bold text-sm transition-colors" style={{ color: mod.color }}>
                 Open Module &rarr;
               </div>
             </div>
