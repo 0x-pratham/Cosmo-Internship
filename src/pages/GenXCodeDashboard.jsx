@@ -355,10 +355,7 @@ export default function GenXCodeDashboard() {
           }}
         >
 
-          {/* -------------------------------------------------------
-              1. Visible Preview
-              Scaled down to fit available screen width.
-          -------------------------------------------------------- */}
+          {/* 1. Visible Preview (Scaled for Screen) */}
           <div
             style={{
               width: CERT_WIDTH * scale,
@@ -390,32 +387,22 @@ export default function GenXCodeDashboard() {
             </div>
           </div>
 
-          {/* -------------------------------------------------------
-              2. Hidden Render Target
-
-              IMPORTANT:
-              exportCertificatePdf looks for:
-              #certificate-render-target
-
-              This copy remains at full 1123x794 resolution and is
-              positioned outside the visible viewport so the user
-              doesn't see a duplicate certificate.
-          -------------------------------------------------------- */}
+          {/* 2. Hidden Render Target */}
           <div
             style={{
               position: "absolute",
-              left: "-9999px",
+              left: 0,
               top: 0,
-              width: CERT_WIDTH,
-              height: CERT_HEIGHT,
-              overflow: "hidden",
+              opacity: 0,
+              pointerEvents: "none",
+              zIndex: -10,
             }}
           >
             <div
               id="certificate-render-target"
               style={{
-                width: CERT_WIDTH,
-                height: CERT_HEIGHT,
+                width: 1123,
+                height: 794,
               }}
             >
               <GenXCodeCertificate
